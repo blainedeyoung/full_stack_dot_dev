@@ -1,0 +1,57 @@
+{% comment %} 
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %}    
+        
+{% endblock title %}
+
+{% block css_files %}   
+    <link rel="stylesheet" href="{% static 'css/.css' %}">
+{% endblock css_files %}
+
+{% block content %} 
+    
+{% endblock content %}
+{% endcomment %}
+
+{% load static %} 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+        {% block title %}    
+        
+        {% endblock title %}
+
+    </title>
+
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+    {% block css_files %}
+
+    {% endblock css_files %}
+
+</head>
+<body>
+    <header id="main-navigation">
+        <h1><a href="{% url 'catalogue:course-list' %}">Full Stack Dot Dev</a></h1>
+        <nav>
+            <a href="{% url 'catalogue:course-list' %}">Catalogue</a>
+            <a href="{% url 'courses:index' %}">Courses</a>
+            <a href="{% url 'discussion_boards:discussion-board' %}">Discussion Boards</a>
+            <a href="{% url 'accounts:index' %}">Account</a>
+        </nav>
+    </header>
+
+    {% block content %} 
+    
+    {% endblock content %}
+        
+</body>
+</html>

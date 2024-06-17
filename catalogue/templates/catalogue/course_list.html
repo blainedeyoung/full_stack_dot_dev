@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}    
+    Course List
+{% endblock title %}
+
+{% block css_files %}   
+    <link rel="stylesheet" href="{% static 'catalogue/css/course_list.css' %}">    
+{% endblock css_files %}
+
+{% block content %} 
+    <h2><a href="{% url 'courses:course-create' %}">Create new course</a></h2>
+    {% for course in courses %}
+        <div class="course-list-item">
+            <h3>{{course.name}}: version {{ course.version }}</h3>
+            <h4 class="course-nav-button"><a href="{% url 'courses:course-detail' course=course.slug %}">Course page</a></h4>
+            <h4 class="course-nav-button"><a href="{% url 'courses:course-update' course=course.slug %}">Edit Course</a></h4>
+            <h4 class="course-nav-button"><a href="{% url 'courses:course-delete' course=course.slug %}">Delete Course</a></h4>
+        </div>
+    {% endfor %}
+        
+{% endblock content %}

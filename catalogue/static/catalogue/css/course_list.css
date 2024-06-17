@@ -1,0 +1,14 @@
+.course-list-item {
+    border: 1px solid rgb(255, 0, 217);
+    margin-top: 20px;
+}
+
+.course-list-item * {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.course-nav-button {
+    display: inline-block;
+    color: brown;
+}

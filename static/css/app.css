@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: whitesmoke;
+}
+
+#main-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border: 5px solid orange;
+    margin-bottom: 20px;
+}
+
+#main-navigation h1 {
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+#main-navigation nav {
+    display: inline-flex;   
+    margin-right: 5%;
+}
+
+#main-navigation a {
+    margin-left: 20px;
+}
+
+form p {
+    margin: 20px 20px 0 20px;
+}
+
+form button {
+    margin: 20px 20px 0 20px;
+}

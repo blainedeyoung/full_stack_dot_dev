@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ object.name }}
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'courses/css/course_detail.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div class="container">
+        <section class="main-panel">
+            <h1>{{ object.name }}</h1>
+            <h2>Version: {{ object.version }}</h2>
+            <h2>Date Created: {{ object.date_created }}</h2>
+            <h3>Categories:
+                {% for category in object.categories.all %}
+                    <span> {{ category.name }}</span>
+                {% endfor %}
+            </h3>
+            <h3>Tags:
+                {% for tag in object.tags.all %}
+                    <span> {{ tag.name }}</span>
+                {% endfor %}
+            </h3>
+            <h3>Teachers:
+                {% for teacher in object.teachers.all %}
+                    <span> {{ teacher.name }}</span>
+                {% endfor %}
+            </h3>
+            <p>{{ object.description }}</p>
+        </section>
+        <section class="right-panel">
+            <h2 class="sections-heading">Course lessons</h2>
+            {% for section in object.course_sections.all %}
+                <div class="course-section">
+                    <h3>Section {{ section.number }}: {{ section.title }}</h3>
+                    <div class="section-buttons">
+                        <a href="{% url 'courses:section-update' course=object.slug number=section.number %}">Edit</a>
+                        <a href="{% url 'courses:section-delete' course=object.slug number=section.number %}">Delete</a>
+                    </div>
+                    {% for lesson in section.section_lessons.all %}
+                        <h4>{{ lesson.number }}: {{ lesson.title }}</h4>
+                        <div class="lesson-buttons">
+                            <a href="{% url 'courses:lesson-update' course=object.slug section_number=section.number number=lesson.number %}">Edit</a>
+                            <a href="{% url 'courses:lesson-delete' course=object.slug section_number=section.number number=lesson.number %}">Delete</a>
+                        </div>
+                    {% endfor %}
+                    <h3><a href="{% url 'courses:lesson-create' course=object.slug section_number=section.number %}">
+                        Add new Lesson</a></h3>
+                </div>
+            {% endfor %}
+            <h3><a href="{% url 'courses:section-create' course=object.slug %}">Add new Section</a></h3>
+        </section>
+    </div>
+
+{% endblock content %}
+

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Section Update
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'courses/css/section_update.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+{% endblock content %}

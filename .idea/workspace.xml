@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fb6d0ff-ad32-45c7-b54d-387a0d684136" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/full_stack_dot_dev.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/static/catalogue/css/category_tag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/static/catalogue/css/course_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/templates/catalogue/category_tag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/templates/catalogue/course_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/course_create.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/course_delete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/course_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/course_update.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/lesson_create.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/lesson_delete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/lesson_update.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/section_create.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/section_delete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/static/courses/css/section_update.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/course_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/course_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/course_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/course_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/lesson_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/lesson_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/lesson_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/section_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/section_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/templates/courses/section_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/static/discussion_boards/css/site_board.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/templates/discussion_boards/site_board.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discussion_boards/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_stack_dot_dev/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_stack_dot_dev/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_stack_dot_dev/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_stack_dot_dev/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/full_stack_dot_dev/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2hOtpFHM7TNSUZmIl4nNVQF2Rj3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/github/full_stack_dot_dev/catalogue/models.py&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\full_stack_dot_dev\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\full_stack_dot_dev\discussion_boards" />
+      <recent name="D:\github\full_stack_dot_dev\discussion_boards\templates\discussion_boards" />
+      <recent name="D:\github\full_stack_dot_dev\discussion_boards\static\discussion_boards\css" />
+      <recent name="D:\github\full_stack_dot_dev\courses" />
+      <recent name="D:\github\full_stack_dot_dev\courses\templates\courses" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="full_stack_dot_dev" type="Python.DjangoServer" factoryName="Django server">
+      <module name="full_stack_dot_dev" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fb6d0ff-ad32-45c7-b54d-387a0d684136" name="Changes" comment="" />
+      <created>1717477132984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717477132984</updated>
+      <workItem from="1717477144834" duration="10904000" />
+      <workItem from="1717618860185" duration="564000" />
+      <workItem from="1717619447796" duration="1001000" />
+      <workItem from="1717620469825" duration="5195000" />
+      <workItem from="1717773529803" duration="13231000" />
+      <workItem from="1718043336149" duration="14531000" />
+      <workItem from="1718303041503" duration="91000" />
+      <workItem from="1718303143991" duration="1423000" />
+      <workItem from="1718389054103" duration="1007000" />
+      <workItem from="1718390085997" duration="5648000" />
+      <workItem from="1718548219995" duration="78000" />
+      <workItem from="1718548335516" duration="543000" />
+      <workItem from="1718548894958" duration="3679000" />
+      <workItem from="1718559636722" duration="5859000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
