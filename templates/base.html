@@ -1,4 +1,6 @@
 {% comment %} 
+
+
 {% extends "base.html" %}
 {% load static %} 
 
@@ -13,6 +15,8 @@
 {% block content %} 
     
 {% endblock content %}
+
+
 {% endcomment %}
 
 {% load static %} 
@@ -43,8 +47,7 @@
         <h1><a href="{% url 'catalogue:course-list' %}">Full Stack Dot Dev</a></h1>
         <nav>
             <a href="{% url 'catalogue:course-list' %}">Catalogue</a>
-            <a href="{% url 'courses:index' %}">Courses</a>
-            <a href="{% url 'discussion_boards:discussion-board' %}">Discussion Boards</a>
+            <a href="{% url 'discussion_boards:discussion-board' slug="site-1" %}">Discussion Board</a>
             <a href="{% url 'accounts:index' %}">Account</a>
         </nav>
     </header>

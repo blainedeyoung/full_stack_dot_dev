@@ -2,18 +2,17 @@
 {% load static %}
 
 {% block title %}
-        Delete Lesson
+        Create Tag
 {% endblock title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static 'courses/css/lesson_delete.css' %}">
+    <link rel="stylesheet" href="{% static 'catalogue/css/tag_create.css' %}">
 {% endblock css_files %}
 
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}"</p>
         {{ form.as_p }}
-        <button type="submit">Confirm</button>
+        <button type="submit">Submit</button>
     </form>
 {% endblock content %}

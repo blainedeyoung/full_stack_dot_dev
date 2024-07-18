@@ -3,45 +3,42 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import CreateView, UpdateView, DeleteView
+from .forms import CourseForm
 from .models import *
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the courses index.")
 
 
 class CourseDetailView(View):
     def get(self, request, course):
         context = {
             "object": Course.objects.select_related('discussion_board')
-            .prefetch_related('categories', 'tags', 'students', 'teachers', 'assistants',
-                              'course_sections__section_lessons').get(slug=course)}
-        return render(request, 'courses/course_detail.html', context)
+            .prefetch_related('tags', 'students', 'teachers', 'assistants', 'required_classes',
+                              'sections__lessons').get(slug=course)}
+        return render(request, 'courses/course/course_detail.html', context)
 
 
 class CourseCreateView(CreateView):
     model = Course
-    template_name = 'courses/course_create.html'
-    fields = ['name', 'description', 'required_classes', 'categories', 'tags', 'version', 'teachers', 'assistants']
+    form_class = CourseForm
+    template_name = 'courses/course/course_create.html'
     success_url = reverse_lazy("catalogue:course-list")
 
 
 class CourseUpdateView(UpdateView):
     model = Course
-    template_name = 'courses/course_update.html'
-    fields = ['name', 'description', 'required_classes', 'categories', 'tags', 'version', 'teachers', 'assistants']
+    form_class = CourseForm
+    template_name = 'courses/course/course_update.html'
     success_url = reverse_lazy("catalogue:course-list")
 
 
 class CourseDeleteView(DeleteView):
     model = Course
-    template_name = 'courses/course_delete.html'
+    template_name = 'courses/course/course_delete.html'
     success_url = reverse_lazy("catalogue:course-list")
 
 
 class SectionCreateView(CreateView):
     model = Section
-    template_name = 'courses/section_create.html'
+    template_name = 'courses/section/section_create.html'
     fields = ['title']
 
     #associates the section with the course
@@ -58,7 +55,7 @@ class SectionCreateView(CreateView):
 
 class SectionUpdateView(UpdateView):
     model = Section
-    template_name = 'courses/section_update.html'
+    template_name = 'courses/section/section_update.html'
     fields = ['title']
 
     def get_object(self, queryset=None):
@@ -73,7 +70,7 @@ class SectionUpdateView(UpdateView):
 
 class SectionDeleteView(DeleteView):
     model = Section
-    template_name = 'courses/section_delete.html'
+    template_name = 'courses/section/section_delete.html'
     success_url = reverse_lazy("catalogue:course-list")
 
     def get_object(self, queryset=None):
@@ -89,7 +86,7 @@ class SectionDeleteView(DeleteView):
 class LessonCreateView(CreateView):
     model = Lesson
     fields = ['title', 'lesson_type', 'lesson_text', 'attached_file']
-    template_name = 'courses/lesson_create.html'
+    template_name = 'courses/lesson/lesson_create.html'
 
     def form_valid(self, form):
         course_slug = self.kwargs['course']
@@ -105,7 +102,7 @@ class LessonCreateView(CreateView):
 
 class LessonUpdateView(UpdateView):
     model = Lesson
-    template_name = 'courses/lesson_update.html'
+    template_name = 'courses/lesson/lesson_update.html'
     fields = ['title', 'lesson_type', 'lesson_text', 'attached_file']
 
     def get_object(self, queryset=None):
@@ -122,7 +119,7 @@ class LessonUpdateView(UpdateView):
 
 class LessonDeleteView(DeleteView):
     model = Lesson
-    template_name = 'courses/lesson_delete.html'
+    template_name = 'courses/lesson/lesson_delete.html'
     success_url = reverse_lazy("catalogue:course-list")
 
     def get_object(self, queryset=None):

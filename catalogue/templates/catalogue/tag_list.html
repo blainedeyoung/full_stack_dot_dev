@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+        Tag List
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'catalogue/css/tag_list.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div class="list-container">
+        <h2><a href="{% url 'catalogue:tag-create' %}">Create New Tag</a></h2>
+        {% for tag in tags %}
+            <ul>
+                <li>
+                    <h3>
+                        <span>Name: {{ tag.name }}</span>
+                        <span>Priority: {{ tag.priority }}</span>
+                    </h3>
+                    <h4>
+                        <a href="{% url 'catalogue:tag-update' pk=tag.id %}">Update</a>
+                        <a href="{% url 'catalogue:tag-delete' pk=tag.id %}">Delete</a>
+                    </h4>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock content %}

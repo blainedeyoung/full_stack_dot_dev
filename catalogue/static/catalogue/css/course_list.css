@@ -12,3 +12,24 @@
     display: inline-block;
     color: brown;
 }
+
+.classified-links {
+    width: 25%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filter-form p {
+    display: inline-flex;
+}

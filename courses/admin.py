@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from catalogue.models import CourseStudents, CourseTeachers, CourseAssistants, Category, Tag
+from catalogue.models import CourseStudents, CourseTeachers, CourseAssistants, Tag
 from .models import *
 
 # Register your models here.
@@ -9,7 +9,6 @@ admin.site.register(Course)
 admin.site.register(CourseStudents)
 admin.site.register(CourseTeachers)
 admin.site.register(CourseAssistants)
-admin.site.register(Category)
 admin.site.register(Tag)
 admin.site.register(Section)
 admin.site.register(Lesson)

@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block title %}
-        Create Course
+        Update Lesson
 {% endblock title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static 'catalogue/css/../../static/courses/css/course_create.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/lesson/lesson_update.css' %}">
 {% endblock css_files %}
 
 {% block content %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Submit</button>
+        <button type="submit">Update</button>
     </form>
 {% endblock content %}

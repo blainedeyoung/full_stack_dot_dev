@@ -1,0 +1,26 @@
+.list-container {
+    margin: 20px;
+}
+
+.list-container h2 {
+    margin-bottom: 20px;
+}
+
+.list-container ul {
+    list-style: none;
+}
+
+.list-container ul li {
+    margin: 10px 0;
+}
+
+.list-container h3 {
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+    margin: 10px 0;
+}
+
+.list-container ul li a {
+    margin: 10px;
+}

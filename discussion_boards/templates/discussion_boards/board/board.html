@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+        {{ object.title }}
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'discussion_boards/css/board/board.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <h1><a href="{% url 'discussion_boards:discussion-board' slug=object.discussion_board.slug %}">{{ object.title }}</a> in {{ object.discussion_board.name }} board</h1>
+    <h2><a href="{% url 'discussion_boards:create-comment' board_id=object.id %}">Create New Comment</a></h2>
+    {% for comment in object.comments.all %}
+        {% if comment.parent_comment is None %}
+            <div class="comment">
+                <h3><a href="{% url 'discussion_boards:view-comment' pk=comment.id %}">{{ comment.subject }}</a></h3>
+                <div class="comment-info-line">
+                    <p>Number of Replies: {{ comment.reply_count }}</p>
+{#                    <p>Posted by: {{ comment.author }}</p>#}
+                    <p>Date Created: {{ comment.date_created }}</p>
+                    <p>Date Modified: {{ comment.date_modified }}</p>
+                    <div class="comment-buttons">
+                        <a href="{% url 'discussion_boards:update-comment' pk=comment.id %}">Update Comment</a>
+                        <a href="{% url 'discussion_boards:delete-comment' pk=comment.id %}">Delete Comment</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

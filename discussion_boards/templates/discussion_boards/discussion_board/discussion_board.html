@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %}    
+        Discussion Board
+{% endblock title %}
+
+{% block css_files %}   
+    <link rel="stylesheet" href="{% static 'discussion_boards/css/discussion_board/discussion_board.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    {% if object.name == "site" %}
+        <h2>Full Stack Dot Dev Site Board</h2>
+    {% else %}
+        <h2>{{ object.name }} - version: {{ object.version }}</h2>
+    {% endif %}
+    <h3><a href="{% url 'discussion_boards:create-board' slug=object.slug %}">Create New Board</a></h3>
+    {% for board in object.boards.all %}
+        <div class="board-links">
+            <div class="board-line">
+                <h3><a href="{% url 'discussion_boards:board' pk=board.id %}">{{ board.title }}</a></h3>
+                <div class="board-buttons">
+                    <h4><a href="{% url 'discussion_boards:update-board' pk=board.id %}">Update Board</a></h4>
+                    <h4><a href="{% url 'discussion_boards:delete-board' pk=board.id %}">Delete Board</a></h4>
+                </div>
+            </div>
+            <h4>Comment Count = {{ board.comment_count }}</h4>
+        </div>
+    {% endfor %}
+{% endblock content %}

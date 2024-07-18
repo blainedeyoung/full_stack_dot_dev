@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block title %}
-        Create Lesson
+        Create Course
 {% endblock title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static 'courses/css/lesson_create.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/course/course_create.css' %}">
 {% endblock css_files %}
 
 {% block content %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Create</button>
+        <button type="submit">Submit</button>
     </form>
 {% endblock content %}

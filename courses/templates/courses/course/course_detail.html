@@ -6,7 +6,7 @@
 {% endblock title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static 'courses/css/course_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/course/course_detail.css' %}">
 {% endblock css_files %}
 
 {% block content %}
@@ -15,14 +15,15 @@
             <h1>{{ object.name }}</h1>
             <h2>Version: {{ object.version }}</h2>
             <h2>Date Created: {{ object.date_created }}</h2>
-            <h3>Categories:
-                {% for category in object.categories.all %}
-                    <span> {{ category.name }}</span>
-                {% endfor %}
-            </h3>
+            <h2>Discussion Board: <a href="{% url 'discussion_boards:discussion-board' slug=object.slug %}">Click here</a></h2>
             <h3>Tags:
                 {% for tag in object.tags.all %}
                     <span> {{ tag.name }}</span>
+                {% endfor %}
+            </h3>
+            <h3>Required Classes:
+                {% for required_class in object.required_classes.all %}
+                    <span> {{ required_class.name }}</span>
                 {% endfor %}
             </h3>
             <h3>Teachers:

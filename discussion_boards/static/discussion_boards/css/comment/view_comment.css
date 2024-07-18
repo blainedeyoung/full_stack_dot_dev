@@ -1,0 +1,22 @@
+.comment {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid orangered;
+}
+
+.comment p {
+    margin: 10px;
+}
+
+.comment_buttons {
+    margin: 10px;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reply {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid green;
+}

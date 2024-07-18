@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Comment
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'discussion_boards/css/comment/view_comment.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <div class="comment">
+        <h2>{{ object.subject }}</h2>
+        <p>{{ object.comment_text }}</p>
+{#      <p>Posted by: {{ object.author }}</p>#}
+        <h4>Date Created: {{ object.date_created }}</h4>
+        <h4>Date Modified: {{ object.date_modified }}</h4>
+        <div class="comment_buttons">
+            <a href="{% url 'discussion_boards:update-comment' pk=object.pk %}">Update</a>
+            <a href="{% url 'discussion_boards:delete-comment' pk=object.pk %}">Delete</a>
+        </div>
+    </div>
+    <a href="{% url 'discussion_boards:create-reply' parent_comment_id=object.pk %}">Add Reply</a>
+    {% for reply in object.replies.all %}
+    	<div class="reply">
+            <h3>{{ reply.subject }}</h3>
+            <p>{{ reply.comment_text }}</p>
+{#            <p>Posted by: {{ reply.author }}</p>#}
+            <h4>Date Created: {{ reply.date_created }}</h4>
+            <h4>Date Modified: {{ reply.date_modified }}</h4>
+            <div class="reply_buttons">
+                <a href="{% url 'discussion_boards:update-comment' pk=reply.pk %}">Update</a>
+                <a href="{% url 'discussion_boards:delete-comment' pk=reply.pk %}">Delete</a>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

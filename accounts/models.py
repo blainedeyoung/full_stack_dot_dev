@@ -10,11 +10,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
     date_joined = models.DateField(auto_now_add=True)
-    last_login = models.DateField(auto_now=True)
     picture = models.ImageField(upload_to='profile_pictures', null=True, blank=True)
     about = models.TextField(null=True, blank=True)
+    is_active = models.BooleanField(default=True, blank=True)
+    last_login = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

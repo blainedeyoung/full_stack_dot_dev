@@ -1,25 +1,37 @@
 from django.shortcuts import render
-from django.views.generic import ListView, View
-from catalogue.models import Category, Tag
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from catalogue.filters import CourseFilter
+from catalogue.models import Tag
 from courses.models import Course
 
 
-class CourseListView(ListView):
-    model = Course
-    template_name = 'catalogue/course_list.html'
-    context_object_name = 'courses'
-    # paginate_by = 10
+def course_list(request):
+    f = CourseFilter(request.GET, queryset=Course.objects.all())
+    return render(request, 'catalogue/course_list.html', {'filter': f})
 
 
-class CategoryTagView(View):
+class TagListView(ListView):
+    model = Tag
+    template_name = 'catalogue/tag_list.html'
+    context_object_name = 'tags'
 
-    def get(self, request):
-        course_selected = request.GET.get('course')
-        courses = Course.objects.prefetch_related('categories', 'tags').all()
-        context = {
-            'courses': courses,
-            'categories': Category.objects.all(), #names instead
-            'tags': Tag.objects.all()
-        }
-        return render(request, 'catalogue/category_tag.html', context)
 
+class TagCreateView(CreateView):
+    model = Tag
+    template_name = 'catalogue/tag_create.html'
+    fields = ['name', 'priority']
+    success_url = reverse_lazy('catalogue:tag-list')
+
+
+class TagUpdateView(UpdateView):
+    model = Tag
+    template_name = 'catalogue/tag_update.html'
+    fields = ['name', 'priority']
+    success_url = reverse_lazy('catalogue:tag-list')
+
+
+class TagDeleteView(DeleteView):
+    model = Tag
+    template_name = 'catalogue/tag_delete.html'
+    success_url = reverse_lazy('catalogue:tag-list')

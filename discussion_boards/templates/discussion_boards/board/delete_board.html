@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+        Delete Board
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'discussion_boards/css/board/delete_board.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h2>Are you sure you want to delete the board: {{ object.title }}?</h2>
+        <input type="submit" value="Delete">
+        <a href="{% url 'discussion_boards:board' pk=object.id %}">Cancel</a>
+    </form>
+{% endblock content %}

@@ -1,0 +1,21 @@
+.board-links {
+    margin: 10px 5px;
+}
+
+.board-line {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.board-buttons {
+    display: inline-flex;
+    margin-right: 60%;
+    align-items: center;
+}
+
+.board-buttons h4 {
+    margin: 0 20px;
+}

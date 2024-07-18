@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+        Create Comment
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'discussion_boards/css/comment/create_comment.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
